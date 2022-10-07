@@ -1,0 +1,25 @@
+<%= render "shared/nav" %>
+<div class="mobile-container">
+  <div class="fill">
+  <% @categories.includes([:movements]).each do |category| %>
+    <div class="category-container">
+      <% @total = 0 %>
+      <div class="category-icon">
+        <img src="<%= category.icon %>">
+      </div>
+      <div class="category-name">
+        <h3><%= link_to category.name, category_path(category) %></h3>
+      </div>
+      <div class="category-total">
+        <% category.movements.each do |movement| %>
+          <% @total += movement.amount %>
+        <% end %>
+      <p> $<%= @total %> </p>
+      </div>
+    </div>
+  <% end %>
+    <footer>
+      <p><%= link_to "New Category", new_category_path%></p>
+    </footer>
+  </div>
+</div>

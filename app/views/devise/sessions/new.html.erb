@@ -1,18 +1,22 @@
-<h2>Log in</h2>
+<%= render "shared/nav" %>
+<div class="logo-container form-image">
+  <img src="../../assets/logo.png">
+</div>
 
+<div class="form-container">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field width-100">
+    <%= f.label :email, hidden: true %>
+    <%= f.email_field :email, placeholder: 'Email', autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class="field width-100">
+    <%= f.label :password, hidden: true %>
+    <%= f.password_field :password, placeholder: 'Password', autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="remember">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
@@ -24,3 +28,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

@@ -1,2 +1,8 @@
-<h1>Splash#index</h1>
-<p>Find me in app/views/splash/index.html.erb</p>
+<%= render "shared/nav" %>
+<div class="container">
+  <div class="logo-container form-image">
+    <img src="../../assets/logo.png">
+  </div>
+  <%= link_to 'Log In', user_session_path, class: 'splash-btn' %> 
+  <%= link_to 'Sign Up', new_user_registration_path, class: 'splash-btn' %>
+</div>
