@@ -12,12 +12,12 @@ class MovementsController < ApplicationController
     @movement = Movement.new(movement_params)
     @movement.author = current_user
     @category = Category.find(params[:category_id])
-    if params[:category_ids]
-      params[:category_ids].each do |category_id|
+    if params[:categories_ids]
+      params[:categories_ids].each do |category_id|
         category = Category.find(category_id)
         category.movements << @movement
       end
-      redirect_to @category
+      redirect_to categories_path
     else
       redirect_to new_category_movement_path(@category), flash: { alert: 'You must select a category.' }
       nil
