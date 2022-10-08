@@ -1,6 +1,6 @@
 <%= render "shared/nav" %>
 <div class="mobile-container">
-  <p><strong><%= link_to "< Back", categories_path, class: "back" %></strong></p>
+  <p><strong><%= link_to "Back", categories_path, class: "back" %></strong></p>
   <p>Total spending for <%= @category.name %>:
   <strong><%@sum=0%>
   <% @movements.each do |movement| %>
@@ -11,9 +11,9 @@
   <% @movements.each do |movement| %>
   <div class="movement">
     <div>
-    <p> <%= movement.name %> </p>
+      <p> <%= movement.name %> </p>
     </div>
-    <strong><p> $<%= movement.amount %> </p></strong>
+      <strong><p> $<%= movement.amount %> </p></strong>
   </div>
   <% end %>
   <footer>

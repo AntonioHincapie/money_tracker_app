@@ -1,16 +1,16 @@
 <nav>
   <% if current_page?(new_user_session_path) %>
   <div class="nav-form">
-    <p class="back-white"><strong><%= link_to "< Back", categories_path %></strong></p>
+    <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
     <h1>LOGIN</h1>
   </div>
   <% elsif current_page?(new_user_registration_path) %>
     <div class="nav-form">
-    <p class="back-white"><strong><%= link_to "< Back", categories_path %></strong></p>
+    <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
     <h1>SIGN UP</h1>
   <% elsif current_page?(new_category_path) %>
     <div class="nav-form">
-    <p class="back-white"><strong><%= link_to "< Back", categories_path %></strong></p>
+    <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
     <div class="new-group-nav">
       <h1>NEW CATEGORY</h1>
       <% if user_signed_in? %>
@@ -24,7 +24,7 @@
     </div>
   <% elsif current_page?(new_user_password_path) %>
     <div class="nav-form">
-      <p class="back-white"><strong><%= link_to "< Back", categories_path %></strong></p>
+      <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
       <div class="new-group-nav">
         <h1>RESET PASSWORD</h1>
         <% if user_signed_in? %>

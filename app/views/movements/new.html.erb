@@ -1,6 +1,6 @@
 <nav>
   <div class="nav-form">
-    <p class="back-white"><strong><%= link_to "< Back", categories_path %></strong></p>
+    <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
     <div class="new-group-nav">
       <h1>NEW MOVEMENT</h1>
       <% if user_signed_in? %>
@@ -50,9 +50,11 @@
     <%end%>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <footer>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </footer>
 
   <% end %>
 </div>
