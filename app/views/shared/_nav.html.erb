@@ -1,0 +1,51 @@
+<nav>
+  <% if current_page?(new_user_session_path) %>
+  <div class="nav-form">
+    <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
+    <h1>LOGIN</h1>
+  </div>
+  <% elsif current_page?(new_user_registration_path) %>
+    <div class="nav-form">
+    <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
+    <h1>SIGN UP</h1>
+  <% elsif current_page?(new_category_path) %>
+    <div class="nav-form">
+    <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
+    <div class="new-group-nav">
+      <h1>NEW CATEGORY</h1>
+      <% if user_signed_in? %>
+      <ul>
+        <li><%= link_to "Home", categories_path %></li>
+        <li>    
+          <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
+        </li>
+      </ul>
+    <% end %>
+    </div>
+  <% elsif current_page?(new_user_password_path) %>
+    <div class="nav-form">
+      <p class="back-white"><strong><%= link_to "Back", categories_path %></strong></p>
+      <div class="new-group-nav">
+        <h1>RESET PASSWORD</h1>
+        <% if user_signed_in? %>
+          <ul>
+            <li><%= link_to "Home", categories_path %></li>
+            <li>    
+              <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <h1>Money Tracker App</h1>
+    <% if user_signed_in? %>
+      <ul>
+        <li><%= link_to "Home", categories_path %></li>
+        <li>    
+          <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
+        </li>
+      </ul>
+    <% end %>
+  <% end %>
+</nav>

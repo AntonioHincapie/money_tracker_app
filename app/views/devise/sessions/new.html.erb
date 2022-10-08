@@ -1,0 +1,34 @@
+<%= render "shared/nav" %>
+<div class="logo-container form-image">
+  <%= image_tag("logo.png") %>
+</div>
+
+<div class="form-container">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field width-100">
+    <%= f.label :email, hidden: true %>
+    <%= f.email_field :email, placeholder: 'Email', autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field width-100">
+    <%= f.label :password, hidden: true %>
+    <%= f.password_field :password, placeholder: 'Password', autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="remember">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+  <footer>
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+  </footer>
+<% end %>
+
+</div>
