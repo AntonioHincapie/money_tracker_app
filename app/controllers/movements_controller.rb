@@ -23,7 +23,7 @@ class MovementsController < ApplicationController
       nil
     end
   end
-  
+
   private
 
   def movement_params

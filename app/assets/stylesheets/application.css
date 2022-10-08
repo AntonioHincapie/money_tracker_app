@@ -32,6 +32,27 @@ a {
   color: var(--blue);
 }
 
+/* Footer CSS */
+
+footer {
+  background-color: var(--green);
+  padding: 30px 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: solid white 1px;
+  padding: 20px;
+  width: 100%;
+}
+
 /* NavBar CSS */
 
 nav {
@@ -77,7 +98,6 @@ nav li a {
   margin: auto;
   text-align: center;
 }
-
 
 .back-white {
   justify-self: flex-start;
@@ -212,25 +232,4 @@ nav li a {
   border: none;
   color: white;
   font-size: medium;
-}
-
-/* Footer CSS */
-
-footer {
-  background-color: var(--green);
-  padding: 30px 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
-footer a {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  border: solid white 1px;
-  padding: 20px;
-  width: 100%;
 }
