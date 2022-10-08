@@ -24,12 +24,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_06_215840) do
   end
 
   create_table "clasifications", force: :cascade do |t|
-    t.bigint "movements_id", null: false
-    t.bigint "categories_id", null: false
+    t.bigint "movement_id", null: false
+    t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["categories_id"], name: "index_clasifications_on_categories_id"
-    t.index ["movements_id"], name: "index_clasifications_on_movements_id"
+    t.index ["category_id"], name: "index_clasifications_on_category_id"
+    t.index ["movement_id"], name: "index_clasifications_on_movement_id"
   end
 
   create_table "movements", force: :cascade do |t|
@@ -58,7 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_06_215840) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "clasifications", "categories", column: "categories_id"
-  add_foreign_key "clasifications", "movements", column: "movements_id"
+  add_foreign_key "clasifications", "categories"
+  add_foreign_key "clasifications", "movements"
   add_foreign_key "movements", "users"
 end

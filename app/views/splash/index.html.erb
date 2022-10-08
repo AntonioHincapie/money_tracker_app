@@ -1,0 +1,10 @@
+<%= render "shared/nav" %>
+<div class="container">
+  <div class="logo-container form-image">
+    <img src="../../assets/logo.png">
+  </div>
+  <div class="splash-links">
+    <%= link_to 'Log In', user_session_path, class: 'splash-btn' %> 
+    <%= link_to 'Sign Up', new_user_registration_path, class: 'splash-btn' %>
+  </div>
+</div>

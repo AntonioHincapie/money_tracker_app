@@ -1,15 +1,235 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('/app/assets/fonts/proximanova-bold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url('/app/assets/fonts/proximanova-light.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'novalight', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --blue: #3778c2;
+  --green: #5fb523;
+  --white: whitesmoke;
+  --text: #434b54;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+/* Footer CSS */
+
+footer {
+  background-color: var(--green);
+  padding: 30px 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: solid white 1px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* NavBar CSS */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blue);
+  padding: 20px 10px;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: white;
+  padding-top: 10px;
+  justify-content: center;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-form h1 {
+  margin: auto;
+}
+
+.new-group-nav {
+  margin: auto;
+  text-align: center;
+}
+
+.back-white {
+  justify-self: flex-start;
+  padding-left: 8%;
+}
+
+.back-white a {
+  color: var(--white);
+  font-size: 1em;
+}
+
+.back {
+  display: inline-block;
+  color: var(--blue);
+  font-size: 1em;
+}
+
+/* Categories CSS */
+
+.mobile-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  padding: 5%;
+  gap: 15px;
+}
+
+.category-container {
+  display: flex;
+  background-color: white;
+  margin: 15px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.category-name {
+  font-size: 20px;
+  color: var(--text);
+  font-family: 'novabold', sans-serif;
+}
+
+.movement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: white;
+}
+
+/* Splash CSS */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-container img {
+  width: 10em;
+}
+
+.splash-btn {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'novabold', sans-serif;
+}
+
+.splash-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Form CSS */
+
+.form-container {
+  width: 90%;
+  margin: auto;
+  padding: 1% 0%;
+}
+
+.field {
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+}
+
+.width-100 input {
+  all: unset;
+  padding: 10px;
+  width: 100%;
+  font-size: 1em;
+}
+
+.remember {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.actions {
+  padding: 20px;
+  border: solid white 1px;
+  font-family: 'novabold', sans-serif;
+}
+
+.actions input {
+  width: 100%;
+  background-color: var(--green);
+  border: none;
+  color: white;
+  font-size: medium;
+}

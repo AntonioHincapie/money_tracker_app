@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
   devise_for :users
   
-  root to: "home#index"
+  root to: "splash#index"
+
+  resources :categories, only: [:index, :show, :create, :new] do
+    resources :movements, only: [:new, :create]
+  end
 end

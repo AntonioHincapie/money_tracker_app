@@ -1,11 +1,15 @@
-<h2>Forgot your password?</h2>
+<%= render "shared/nav" %>
+<div class="logo-container form-image">
+  <img src="../../assets/icon.png">
+</div>
 
+<div class="form-container">
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field width-100">
+    <%= f.label :email, hidden: true %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
   </div>
 
   <div class="actions">
@@ -14,3 +18,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
