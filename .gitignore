@@ -32,3 +32,6 @@
 
 # Ignore node modules from style linters
 /node_modules
+
+# Ignore application configuration
+/config/application.yml
