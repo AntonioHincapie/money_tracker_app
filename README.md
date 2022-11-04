@@ -48,7 +48,7 @@ This project is about building a mobile web application where you can manage you
 
 - Twitter: [@MarcoHincapie](https://twitter.com/MarcoHincapie)
 
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/marco-hincapi%C3%A9-7a76751a3/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/antoniohincapie/)
 
 ## 🤝 Contributing
 
